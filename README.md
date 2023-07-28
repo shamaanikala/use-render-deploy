@@ -32,7 +32,7 @@ jobs:
     name: Trigger Render.com Deploy Hook
     runs-on: ubuntu-latest
     steps:
-      - uses: shamaanikala/use-render-deploy
+      - uses: shamaanikala/use-render-deploy@v1-alpha
         with:
           render-service-id: ${{ secrets.RENDER_SERVICE_ID }}
           render-api-key: ${{ secrets.RENDER_API_KEY }}
