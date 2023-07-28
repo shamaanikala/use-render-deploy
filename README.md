@@ -29,11 +29,11 @@ on:
 
 jobs:
   trigger_render_deploy_hook
-  name: Trigger Render.com Deploy Hook
-  runs-on: ubuntu-latest
-  steps:
-    - uses: shamaanikala/use-render-deploy
-      with:
-        render-service-id: ${{ secrets.RENDER_SERVICE_ID }}
-        render-api-key: ${{ secrets.RENDER_API_KEY }}
+    name: Trigger Render.com Deploy Hook
+    runs-on: ubuntu-latest
+    steps:
+      - uses: shamaanikala/use-render-deploy
+        with:
+          render-service-id: ${{ secrets.RENDER_SERVICE_ID }}
+          render-api-key: ${{ secrets.RENDER_API_KEY }}
 ```
