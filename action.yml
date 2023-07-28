@@ -1,0 +1,17 @@
+name: 'Use Render Deploy Action'
+description: 'Simple GitHub Action to trigger deploy webhook on Render.com'
+inputs:
+  render-service-id:
+    description: 'Secret Render Web Service deploy hook value'
+    required: true
+  render-api-key:
+    description: 'Secret Render API key.'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - run: echo Deploying to Render.com...
+      shell: bash
+    - name: Trigger deployment
+      run: curl https://api.render.com/deploy/srv-${{ inputs.render-service-id }}?key=${{ inputs.render-api-key }}
+      shell: bash
